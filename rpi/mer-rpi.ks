@@ -11,8 +11,8 @@ rootpw rootme
 
 user --name mer  --groups audio,video --password rootme 
 
-repo --name=mer-core --baseurl=http://releases.merproject.org/releases/0.20120920.0.0.3/builds/armv6l/packages --save --debuginfo --source
-repo --name=raspPi-HA --baseurl=http://repo.pub.meego.com/home:/alien:/raspi/Mer_Core_armv6l/ --save --debuginfo --source
+repo --name=mer-core --baseurl=http://releases.merproject.org/releases/latest/builds/armv6l/packages --save --debuginfo --source
+repo --name=rpi-ha --baseurl=http://repo.pub.meego.com//home:/kulve:/rpi-ha/Mer_Core_armv6l/ --save --debuginfo --source
 %packages
 
 @Mer Connectivity
