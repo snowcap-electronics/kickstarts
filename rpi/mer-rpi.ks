@@ -38,6 +38,13 @@ openssh-server
 %end
 
 %post
+# Without this line the rpm don't get the architecture right.
+echo -n 'armv7hl-meego-linux' > /etc/rpm/platform
+
+# Also libzypp has problems in autodetecting the architecture so we force tha as well.
+# https://bugs.meego.com/show_bug.cgi?id=11484
+echo 'arch = armv7hl' >> /etc/zypp/zypp.conf
+
 # Create a session file for qmlviewer.
 cat > /usr/share/xsessions/X-MER-QMLVIEWER.desktop << EOF
 [Desktop Entry]
