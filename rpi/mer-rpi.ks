@@ -33,9 +33,7 @@ openssh-clients
 openssh-server
 
 
-bootloader-raspPi
-kernel-adaptation-raspPi
-mkimage-raspPi
+@Raspberry Pi Boot
 
 %end
 
