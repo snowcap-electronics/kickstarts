@@ -13,7 +13,7 @@ user --name mer  --groups audio,video --password rootme
 
 repo --name=mer-core --baseurl=http://releases.merproject.org/releases/latest/builds/armv6l/packages --save --debuginfo --source
 repo --name=mer-tools --baseurl=http://repo.pub.meego.com/Mer:/Tools/Mer_Core_armv6l/ --save --debuginfo --source
-repo --name=rpi-ha --baseurl=http://repo.pub.meego.com//home:/kulve:/rpi-ha/Mer_Core_armv6l/ --save --debuginfo --source
+repo --name=rpi-ha --baseurl=http://repo.pub.meego.com/CE:/Adaptation:/RaspberryPi/Mer_Core_armv6l/ --save --debuginfo --source
 %packages
 
 @Mer Connectivity
@@ -21,6 +21,8 @@ repo --name=rpi-ha --baseurl=http://repo.pub.meego.com//home:/kulve:/rpi-ha/Mer_
 @Mer Minimal Xorg
 @Mer Core
 
+@Raspberry Pi Boot
+@Raspberry Pi GFX
 
 qt-qmlviewer
 xorg-x11-drv-evdev
@@ -32,9 +34,6 @@ xorg-x11-server-Xorg-setuid
 openssh
 openssh-clients
 openssh-server
-
-
-@Raspberry Pi Boot
 
 %end
 
