@@ -12,9 +12,11 @@ rootpw rootme
 user --name mer  --groups audio,video --password rootme 
 
 repo --name=mer-core --baseurl=http://releases.merproject.org/releases/latest/builds/armv6l/packages --save --debuginfo --source
-repo --name=mer-tools --baseurl=http://repo.pub.meego.com/Mer:/Tools/Mer_Core_armv6l/ --save --debuginfo --source
-repo --name=rpi-ha --baseurl=http://repo.pub.meego.com/CE:/Adaptation:/RaspberryPi/Mer_Core_armv6l/ --save --debuginfo --source
-repo --name=nemo-mw --baseurl=http://repo.pub.meego.com/CE:/MW:/Shared/Mer_Core_armv6l/ --save --debuginfo --source
+repo --name=mer-tools --baseurl=http://repo.merproject.org/obs/mer-tools:/stable/latest_armv6l/ --save --debuginfo --source
+repo --name=rpi-ha --baseurl=http://repo.merproject.org/obs/nemo:/devel:/hw:/brcm:/bcm2835:/rpi/latest_armv6l/ --save --debuginfo --source
+repo --name=nemo-mw --baseurl=http://repo.merproject.org/obs/nemo:/stable:/mw/latest_armv6l/ --save --debuginfo --source
+
+repo --name=rpi-ha_mod --baseurl=http://repo.merproject.org/obs/home:/JvD:/branches:/nemo:/devel:/hw:/brcm:/bcm2835:/rpi/latest_armv6l/ --save --debuginfo --source
 
 %packages
 
@@ -23,8 +25,17 @@ repo --name=nemo-mw --baseurl=http://repo.pub.meego.com/CE:/MW:/Shared/Mer_Core_
 @Mer Minimal Xorg
 @Mer Core
 
-@Raspberry Pi Boot
-@Raspberry Pi GFX
+#@Raspberry Pi Boot
+bootloader-rpi
+kernel-adaptation-rpi
+
+#@Raspberry Pi GFX
+gfx-rpi
+gfx-rpi-libOMXIL
+gfx-rpi-libEGL
+gfx-rpi-libGLESv1
+gfx-rpi-libGLESv2
+
 
 qt-qmlviewer
 xorg-x11-drv-evdev
