@@ -63,7 +63,7 @@ cat > /usr/share/xsessions/X-MER-QMLVIEWER.desktop << EOF
 [Desktop Entry]
 Version=1.0
 Name=qmlviewer
-Exec=/usr/bin/qmlviewer
+Exec=/usr/lib/qt4/bin/qmlviewer
 Type=Application
 EOF
 
